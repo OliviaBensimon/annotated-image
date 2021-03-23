@@ -54,6 +54,7 @@ figcaption {
     font-size: 0.9rem;
     color: #8e8a8a;
     padding: 5px 0;
+    text-align: center;
 }
 
 /** BASE CLASSES */
