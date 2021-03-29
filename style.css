@@ -64,8 +64,8 @@ figcaption {
 
 .annotate .dot {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid #ce1256;
@@ -75,12 +75,11 @@ figcaption {
 .annotate .dot .inner {
     position: absolute;
     opacity: 0;
-    padding: 5px;
+    padding: 22px;
     font-size: 0.8em;
-    width: 80%;
     top: 50%;
-    left: 50%;
     transform: translateY(-50%);
+    width: 100%;
 }
 
 .annotate .dot .close {
@@ -137,10 +136,9 @@ figcaption {
     z-index: 2;
 }
 
-.annotate .dot.build .inner {
-    top: 45%;
-    left: 32%;
-    transform: translateY(-50%) translateX(-50%);
+.annotate .dot.active .inner {
+    overflow: scroll;
+    height: 100%;
 }
 
 .annotate .dot.active .inner,
@@ -218,25 +216,17 @@ figcaption {
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
+
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-}
+    .annotate .dot .inner {
+        padding: 22px 75px;
+    }
 
-.annotate .dot .inner {
-    position: absolute;
-    opacity: 0;
-    padding: 50px;
-    font-size: 1em;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.annotate .dot.build .inner {
-    top: 20%;
-    left: 38%;
-    transform: translateY(-50%) translateX(-50%);
+    .annotate .dot.active .inner {
+        height: auto;
+        overflow: auto;
+    }
 }
 
 /*********************************************************************
